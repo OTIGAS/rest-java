@@ -9,7 +9,7 @@ public class CandidateEntity {
 
     private UUID id;
     private String name;
-    @Email(message = "O campo (email) deve conter u e-amil válido")
+    @Email(message = "O campo (email) deve conter um e-mail válido")
     private String email;
     @Length(min = 3, max = 10)
     private String password;
