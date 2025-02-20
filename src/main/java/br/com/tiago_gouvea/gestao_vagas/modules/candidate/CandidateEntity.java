@@ -1,12 +1,17 @@
 package br.com.tiago_gouvea.gestao_vagas.modules.candidate;
 
+import jakarta.validation.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+
 import java.util.UUID;
 
 public class CandidateEntity {
 
     private UUID id;
     private String name;
+    @Email(message = "O campo (email) deve conter u e-amil válido")
     private String email;
+    @Length(min = 3, max = 10)
     private String password;
     private String description;
     private String curriculum;
